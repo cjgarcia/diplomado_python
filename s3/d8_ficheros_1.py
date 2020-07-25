@@ -1,8 +1,12 @@
 from csv import reader
 
-fichero = open('datos_estudiantes.csv').read()
+fichero_csv = open('asistencia.csv')
+datos = list(reader(fichero_csv))
 
-datos_estudiantes_csv = reader(fichero)
+total_asistencia = 0
+for estudiante in datos[1:]:
+    total_asistencia += int(estudiante[1])
 
-for estudiante in datos_estudiantes_csv:
-    print(estudiante)
+pc_asistencia_clase_ant = (total_asistencia / len(datos[1:])) * 100
+
+print(f"PC asistencia: {pc_asistencia_clase_ant}%")
