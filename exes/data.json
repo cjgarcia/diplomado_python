@@ -1,0 +1,38 @@
+[
+    {
+        "nombre": "leche",
+        "cantidad": 2.0,
+        "precio": 55.0,
+        "monto_pagar": 110.0
+    },
+    {
+        "nombre": "arroz",
+        "cantidad": 1.0,
+        "precio": 25.0,
+        "monto_pagar": 25.0
+    },
+    {
+        "nombre": "peras",
+        "cantidad": 5.0,
+        "precio": 27.0,
+        "monto_pagar": 135.0
+    },
+    {
+        "nombre": "coffee",
+        "cantidad": 1.0,
+        "precio": 115.0,
+        "monto_pagar": 115.0
+    },
+    {
+        "nombre": "Pizza congelada",
+        "cantidad": 2,
+        "precio": 300,
+        "monto_pagar": 600
+    },
+    {
+        "nombre": "Pan integral",
+        "cantidad": 5,
+        "precio": 12,
+        "monto_pagar": 60
+    }
+]

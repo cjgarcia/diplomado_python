@@ -1,4 +1,4 @@
-import os
+import os, json
 
 lista_compra = []
 
@@ -32,17 +32,26 @@ def obt_item_monto_max(canasta):
     
     return item_monto_max
 
-print("Nombre", "Cantidad", "Precio", "Monto a Pagar", sep='|\t')
+# print("Nombre", "Cantidad", "Precio", "Monto a Pagar", sep='|\t')
 
-for item in lista_compra:
-    print(item['nombre'], item['cantidad'], item['precio'], item['monto_pagar'],sep='|\t')
-
-
-
-item_monto_max = obt_item_monto_max(lista_compra)
-
-print(f"\nEl producto {item_monto_max['nombre']} tiene un monto de {item_monto_max['monto_pagar']} DOP\n")
+# for item in lista_compra:
+#     print(item['nombre'], item['cantidad'], item['precio'], item['monto_pagar'],sep='|\t')
 
 
+
+# item_monto_max = obt_item_monto_max(lista_compra)
+# print(f"\nEl producto {item_monto_max['nombre']} tiene un monto de {item_monto_max['monto_pagar']} DOP\n")
+
+
+fichero_json = open('data.json', 'a+')
+
+str_json = json.dumps(lista_compra, indent=4)
+
+
+fichero_json.write(str_json)
+
+fichero_json.close()
+
+print("Fichero guardado con exito!")
 
 
