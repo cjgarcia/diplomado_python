@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block titulo %} - INFO {% endblock %}
+{% block contenido %}
+    <div class="container">
+        <div class="row">
+            <div class="col my-4">
+                <div class="card">
+                    <div class="card-header">
+                      Información 
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Diplomado Python</h5>
+                      <div class="card-content text-center">
+                          <img src="{{ url_for('static', filename='logo.png')}}" 
+                               class="img-responsive img-rounded"
+                               alt="Logo de Python">
+                      </div>
+                      <p class="card-text">Diplomado sobre desarrollo web con Python y Flask</p>
+                      <br>
+                      <h4>Integrantes:</h4>
+                      <ul>
+                          {% for integrante in integrantes %}
+                            <li>
+                                {{integrante}}
+                                {% if integrante == 'Crecencio Garcia'%}
+                                    <span class="badge badge-warning">PROFESOR</span>
+                                {% endif%}
+                            </li>
+                          {% endfor%}
+                      </ul>
+                      <a href="/" class="btn btn-primary">VOLVER</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
