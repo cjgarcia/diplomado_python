@@ -19,6 +19,7 @@ while True:
             item['monto_pagar'] = item['cantidad'] * item['precio']
         except:
             item['precio'] = 0
+            item['cantidad'] = 0
 
         lista_compra.append(item)
 
