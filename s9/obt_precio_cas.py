@@ -4,6 +4,7 @@ from tensorflow import keras
 
 def obt_precio_casa(num_habitaciones):
     x = np.array([1, 3, 4, 1, 4])
+    # y = 300000 + 150000x
     y = np.array([450000, 750000, 900000, 420000, 885000])
 
     modelo = tf.keras.Sequential([keras.layers.Dense(units=1, input_shape=[1])])

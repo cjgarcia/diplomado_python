@@ -19,5 +19,12 @@ from estudiantes import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.IndexView.as_view(), name='index')
+    path('', views.IndexView.as_view(), name='index'),
+    path('info/', views.InfoView.as_view(), name='info'),
+    path('estudiante/nuevo', views.EstudianteNuevo.as_view(), name='estudiante_nuevo'),
+    path('estudiante/<int:pk>/editar', views.EstudianteEditar.as_view(), name='estudiante_editar'),
+    path('estudiante/<int:pk>/eliminar', views.EstudianteEliminar.as_view(), name='estudiante_eliminar'),
+    path('accounts/login', views.LoginView.as_view(), name='login'),
+    path('asistencia/nueva', views.AsistenciaNueva.as_view(), name='asistencia_nueva'),
+
 ]

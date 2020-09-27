@@ -1,0 +1,34 @@
+{% extends 'estudiantes/layout.html' %}
+{% block titulo %} - INFO {% endblock %}
+{% block contenido %}
+    <div class="container">
+        <div class="row">
+            <div class="col my-4">
+                <div class="card">
+                    <div class="card-header">
+                      Información 
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Diplomado Python</h5>
+                      <div class="card-content text-center">
+                         
+                      </div>
+                      <p class="card-text">Diplomado sobre desarrollo web con Python y Flask</p>
+                      <br>
+                      <h4>Integrantes:</h4>
+                      <ul>
+                         {% for estudiante in estudiantes %}
+                            <li>{{ estudiante }} (
+                                <a class="btn btn-sm btn-outline-success" href="/estudiante/{{estudiante.id}}/editar">EDITAR</a> | 
+                                <a class="btn btn-sm btn-outline-danger" href="/estudiante/{{estudiante.id}}/eliminar">ELIMINAR</a>)
+                            </li>
+                         {% endfor%}
+                      </ul>
+                      <a href="/" class="btn btn-primary">VOLVER</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
